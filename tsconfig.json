@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,       // <-- thêm dòng này
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "build"
+  }
+}
