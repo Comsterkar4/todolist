@@ -1,7 +1,7 @@
-// src/app.ts
+
 import express from "express";
 import tasksRoutes from "./routes/tasksRoutes";
-import usersRoutes from "./routes/usersRoutes"; // nếu bạn đã làm users
+import usersRoutes from "./routes/usersRoutes"; 
 
 const app = express();
 app.use(express.json());

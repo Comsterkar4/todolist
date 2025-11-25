@@ -1,10 +1,10 @@
-  // src/controllers/usersController.ts
+
 import { Request, Response } from "express";
 import { db } from "../config/db";
 import { users } from "../schema/users";
 import { eq } from "drizzle-orm";
 
-// Lấy tất cả user
+
 export const getUsers = async (req: Request, res: Response) => {
   try {
     const allUsers = await db.select().from(users);
@@ -15,7 +15,7 @@ export const getUsers = async (req: Request, res: Response) => {
   }
 };
 
-// Lấy user theo id
+
 export const getUserById = async (req: Request, res: Response) => {
   try {
     const id = Number(req.params.id);
@@ -27,7 +27,7 @@ export const getUserById = async (req: Request, res: Response) => {
   }
 };
 
-// Tạo mới user
+
 export const createUser = async (req: Request, res: Response) => {
   try {
     const { name, email, password } = req.body;
@@ -39,7 +39,7 @@ export const createUser = async (req: Request, res: Response) => {
   }
 };
 
-// Cập nhật user
+
 export const updateUser = async (req: Request, res: Response) => {
   try {
     const id = Number(req.params.id);
@@ -58,7 +58,7 @@ export const updateUser = async (req: Request, res: Response) => {
   }
 };
 
-// Xóa user
+
 export const deleteUser = async (req: Request, res: Response) => {
   try {
     const id = Number(req.params.id);

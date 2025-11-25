@@ -14,7 +14,7 @@ interface UpdateTaskBody {
   due_date?: string;
 }
 
-// Lấy danh sách tasks của user
+
 export const getTasks = async (req: Request, res: Response) => {
   const userId = Number(req.params.userId);
   try {
@@ -25,7 +25,6 @@ export const getTasks = async (req: Request, res: Response) => {
   }
 };
 
-// Tạo task mới cho user
 export const createTask = async (req: Request, res: Response) => {
   const userId = Number(req.params.userId);
   const { title, description, due_date } = req.body as CreateTaskBody;
@@ -66,7 +65,6 @@ export const updateTask = async (req: Request, res: Response) => {
   }
 };
 
-// Xóa task của user
 export const deleteTask = async (req: Request, res: Response) => {
   try {
     const userId = Number(req.params.userId);
