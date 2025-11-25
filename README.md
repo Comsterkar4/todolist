@@ -1,1 +1,2 @@
-run server : npx ts-node src/server.ts
+run server : pnpm run dev
+
